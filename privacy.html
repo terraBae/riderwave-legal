@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Rider Wave</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 5rem;
+    line-height: 1.6;
+    color: #1a1f28;
+    background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e7ebf0; background: #0e131b; }
+    a { color: #6db4ff; }
+    .note { background: #17202b; border-color: #2a3644; }
+    hr { border-color: #263140; }
+  }
+  h1 { font-size: 1.7rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.25rem; }
+  .updated { color: #6b7684; font-size: 0.9rem; margin-bottom: 2rem; }
+  .note {
+    background: #f4f6f8;
+    border: 1px solid #dde3e9;
+    border-radius: 8px;
+    padding: 1rem 1.15rem;
+    margin: 1.25rem 0;
+    font-size: 0.95rem;
+  }
+  ul { padding-left: 1.3rem; }
+  li { margin-bottom: 0.4rem; }
+  a { color: #1a5fd6; }
+  hr { margin: 2.5rem 0; border: none; border-top: 1px solid #e2e6ea; }
+  code { font-size: 0.92em; }
+  .home-link { display: inline-block; margin-bottom: 1.5rem; font-size: 0.95rem; }
+</style>
+</head>
+<body>
+
+<a class="home-link" href="index.html">&larr; Rider Wave legal documents</a>
+
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: August 2, 2026 &middot; Applies to Rider Wave (Android), beta/testing version</p>
+
+<div class="note">
+  <strong>Plain-language summary:</strong> Rider Wave does not have a server or account system today. Everything the app records about you — your rides, routes, hazard reports, and posts — stays on your phone. Nothing is uploaded to us, because there is currently nowhere for it to go.
+</div>
+
+<h2>1. What this app is, today</h2>
+<p>
+  Rider Wave is currently a <strong>beta/testing-stage, local-first</strong> motorcycle
+  navigation and ride-tracking app. As of this policy's last update, Rider Wave has
+  <strong>no backend server, no user accounts, and no sign-in</strong>. All app data is
+  generated and stored directly on your device.
+</p>
+
+<h2>2. Data stored on your device</h2>
+<p>The app stores the following locally, using standard Android app-private storage (and, for one item noted below, Android's encrypted secure storage). None of it is transmitted to any Rider Wave-owned server, because none exists yet:</p>
+<ul>
+  <li><strong>Profile information</strong> you enter (name, rider icon choice, bike/garage entries)</li>
+  <li><strong>Saved routes and ride history</strong> (GPS tracks, distance, time, speed recorded during a ride)</li>
+  <li><strong>Hazard reports and social posts ("waves")</strong> you create in the app</li>
+  <li><strong>Favorite/saved places</strong> (home, work, recent searches)</li>
+  <li><strong>App settings</strong> (map style, units, theme, developer/debug options)</li>
+</ul>
+<p>
+  You can permanently delete this data at any time from <em>Settings &rarr; Your data</em>
+  in the app, or by uninstalling the app.
+</p>
+
+<h2>3. Location data</h2>
+<p>
+  Rider Wave uses your device's GPS location, with your permission, to show your position
+  on the map, provide turn-by-turn navigation, and record your ride track while the app is
+  open. Location data is used entirely on-device for these purposes and is <strong>not
+  uploaded to or stored on any Rider Wave server</strong>. The app currently requests
+  location access only while it is in use (foreground) — it does not track your location
+  in the background or while the screen is locked.
+</p>
+
+<h2>4. Optional OpenWeatherMap API key</h2>
+<p>
+  If you choose to enter your own OpenWeatherMap API key in Settings for enhanced weather
+  data, that key is stored using Android's encrypted secure storage
+  (Android Keystore-backed), directly on your device. You control this key entirely — Rider
+  Wave does not see, collect, or transmit it anywhere except directly to OpenWeatherMap's
+  API when making the weather requests you've enabled.
+</p>
+
+<h2>5. Third-party services this app talks to</h2>
+<p>
+  To provide maps, search, routing, and weather, Rider Wave sends necessary requests
+  (such as your searched location or current position, when relevant to the feature) directly
+  from your device to these independent, third-party services. Rider Wave does not operate
+  any of them, and does not see or store the responses beyond normal on-device app use. Each
+  is governed by its own separate privacy policy:
+</p>
+<ul>
+  <li><strong>Nominatim / OpenStreetMap</strong> — address search and geocoding</li>
+  <li><strong>Valhalla and OSRM</strong> — route calculation</li>
+  <li><strong>Overpass API (OpenStreetMap)</strong> — nearby points of interest (gas, businesses)</li>
+  <li><strong>Open-Meteo, and OpenWeatherMap if you supply a key</strong> — weather data</li>
+  <li><strong>RainViewer</strong> — radar imagery overlay</li>
+  <li><strong>Map tile providers</strong> (including OpenStreetMap-based and Esri sources) — the map imagery itself</li>
+</ul>
+<p>
+  We recommend reviewing each provider's own policy if you have questions about how they
+  individually handle request data (such as IP address, which is inherent to any network
+  request).
+</p>
+
+<h2>6. Music control bar</h2>
+<p>
+  If you grant Notification Access, Rider Wave can display and control whatever music app
+  you're currently playing (song title, artist, album art, play/pause/skip). This works by
+  reading the Android system's local media session on your device — it never reads
+  notification content, never requires logging into any music service, and this data never
+  leaves your device.
+</p>
+
+<h2>7. No accounts, no analytics, no advertising</h2>
+<p>
+  Rider Wave does not currently have user accounts, sign-in, or any cloud-based social
+  features. The app does not integrate any analytics, crash-reporting, or advertising SDKs
+  as of this policy's last update.
+</p>
+
+<h2>8. Children's privacy</h2>
+<p>
+  Rider Wave is not directed at children, and we do not knowingly collect personal
+  information from children. Since the app has no accounts or data submission to any
+  server, there is no mechanism today for personal information to reach us from any user.
+</p>
+
+<h2>9. This is a beta app, and this policy will change</h2>
+<p>
+  Rider Wave is under active development. Planned future features — such as a shared
+  backend, user accounts, or business/social features — do not exist yet and are not
+  described here as current fact. When any feature is introduced that changes how data is
+  collected, stored, or transmitted, <strong>this policy will be updated first</strong>, and
+  the "Last updated" date above will reflect that change.
+</p>
+
+<h2>10. Contact</h2>
+<p>
+  Questions about this policy can be sent to
+  <a href="mailto:david@terrabae.com">david@terrabae.com</a>.
+</p>
+
+<hr>
+<p style="font-size:0.85rem; color:#8a94a1;">
+  This document is a plain-language, accurate description of Rider Wave's actual current
+  data practices as of the date above. It is a good-faith starting draft, not a substitute
+  for review by a qualified attorney.
+</p>
+
+</body>
+</html>
