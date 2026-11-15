@@ -45,111 +45,116 @@
 <a class="home-link" href="index.html">&larr; Rider Wave legal documents</a>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: August 2, 2026 &middot; Applies to Rider Wave (Android), beta/testing version</p>
+<p class="updated">Last updated: November 15, 2026 &middot; Applies to Rider Wave (Android)</p>
 
 <div class="note">
-  <strong>Plain-language summary:</strong> Rider Wave does not have a server or account system today. Everything the app records about you — your rides, routes, hazard reports, and posts — stays on your phone. Nothing is uploaded to us, because there is currently nowhere for it to go.
+  <strong>Plain-language summary:</strong> Rider Wave has no accounts, no analytics and no advertising. Your rides, routes and saved places stay on your phone. Some map features can be answered by the Rider Wave Server, which we run ourselves. When you use those, the server sees your IP address and the location or search text needed to answer, and keeps a basic access log, without those contents, for about 7 days. We never sell your data.
 </div>
 
-<h2>1. What this app is, today</h2>
+<h2>1. What this app is</h2>
 <p>
-  Rider Wave is currently a <strong>beta/testing-stage, local-first</strong> motorcycle
-  navigation and ride-tracking app. As of this policy's last update, Rider Wave has
-  <strong>no backend server, no user accounts, and no sign-in</strong>. All app data is
-  generated and stored directly on your device.
+  Rider Wave is a motorcycle navigation and ride-tracking app under active development. It has no user accounts and no sign-in. Your rides and settings are created and stored on your phone. For some map features the app can talk to the Rider Wave Server, described in section 4. Versions of Rider Wave published on Google Play or the App Store before November 2026 never contacted that server, and section 4 does not apply to them.
 </p>
 
-<h2>2. Data stored on your device</h2>
-<p>The app stores the following locally, using standard Android app-private storage (and, for one item noted below, Android's encrypted secure storage). None of it is transmitted to any Rider Wave-owned server, because none exists yet:</p>
+<h2>2. Data stored on your phone</h2>
+<p>
+  The app stores the following in its own private storage on your phone:
+</p>
 <ul>
-  <li><strong>Profile information</strong> you enter (name, rider icon choice, bike/garage entries)</li>
-  <li><strong>Saved routes and ride history</strong> (GPS tracks, distance, time, speed recorded during a ride)</li>
-  <li><strong>Hazard reports and social posts ("waves")</strong> you create in the app</li>
-  <li><strong>Favorite/saved places</strong> (home, work, recent searches)</li>
-  <li><strong>App settings</strong> (map style, units, theme, developer/debug options)</li>
+  <li>Profile information you enter (name, rider icon, bike/garage entries)</li>
+  <li>Saved routes and ride history (GPS tracks, distance, time, speed)</li>
+  <li>Hazard reports and posts ("waves") you create</li>
+  <li>Saved places (home, work, favorites, recent searches and destinations)</li>
+  <li>App settings</li>
 </ul>
 <p>
-  You can permanently delete this data at any time from <em>Settings &rarr; Your data</em>
-  in the app, or by uninstalling the app.
+  Depending on your device settings, Android's backup feature may include this data in your Google backup. You can delete this data at any time from Settings → Your data in the app, or by deleting the app.
 </p>
 
 <h2>3. Location data</h2>
 <p>
-  Rider Wave uses your device's GPS location, with your permission, to show your position
-  on the map, provide turn-by-turn navigation, and record your ride track while the app is
-  open. Location data is used entirely on-device for these purposes and is <strong>not
-  uploaded to or stored on any Rider Wave server</strong>. The app currently requests
-  location access only while it is in use (foreground) — it does not track your location
-  in the background or while the screen is locked.
+  With your permission, Rider Wave uses your phone's location to show your position on the map, give turn-by-turn directions, and record your ride while the app is open. It asks for location only while the app is in use; it does not track you in the background or while the screen is locked. Your ride track and position history are stored only on your phone. Location is sent off the phone only in the ways described in sections 4, 5 and 6, to answer a map request you make, never to build a history of where you have been.
 </p>
 
-<h2>4. Optional OpenWeatherMap API key</h2>
+<h2>4. The Rider Wave Server</h2>
 <p>
-  If you choose to enter your own OpenWeatherMap API key in Settings for enhanced weather
-  data, that key is stored using Android's encrypted secure storage
-  (Android Keystore-backed), directly on your device. You control this key entirely — Rider
-  Wave does not see, collect, or transmit it anywhere except directly to OpenWeatherMap's
-  API when making the weather requests you've enabled.
-</p>
-
-<h2>5. Third-party services this app talks to</h2>
-<p>
-  To provide maps, search, routing, and weather, Rider Wave sends necessary requests
-  (such as your searched location or current position, when relevant to the feature) directly
-  from your device to these independent, third-party services. Rider Wave does not operate
-  any of them, and does not see or store the responses beyond normal on-device app use. Each
-  is governed by its own separate privacy policy:
+  Rider Wave runs its own server, operated by the app's developer on its own hardware in the United States, that can answer some map requests so that fewer of them go to outside companies. These features are listed below. All of them can be turned off in Settings → Developer; most are off by default, and "Search as you type" is on by default.
 </p>
 <ul>
-  <li><strong>Nominatim / OpenStreetMap</strong> — address search and geocoding</li>
-  <li><strong>Valhalla and OSRM</strong> — route calculation</li>
-  <li><strong>Overpass API (OpenStreetMap)</strong> — nearby points of interest (gas, businesses)</li>
-  <li><strong>Open-Meteo, and OpenWeatherMap if you supply a key</strong> — weather data</li>
-  <li><strong>RainViewer</strong> — radar imagery overlay</li>
-  <li><strong>Map tile providers</strong> (including OpenStreetMap-based and Esri sources) — the map imagery itself</li>
+  <li>Routes (off by default): the start, stops and destination of a route that lies within Florida and Kentucky are sent so the server can calculate it. Other routes use the public routing services in section 6.</li>
+  <li>Address search (off by default): your search text and your position, used to rank nearby results.</li>
+  <li>Search as you type (on by default): the letters you have typed so far, and your position, to suggest places while you type. If you turn it off, searching works as before when you press Enter.</li>
+  <li>Weather radar (off by default): the radar map tiles for the area you are viewing.</li>
+  <li>Traffic rerouting suggestions (off by default): see section 5.</li>
 </ul>
 <p>
-  We recommend reviewing each provider's own policy if you have questions about how they
-  individually handle request data (such as IP address, which is inherent to any network
-  request).
+  What the server records. Its access log keeps your IP address, the date and time, the type of request, the web address path, the response status, its size and how long it took. For radar the path includes the map tile coordinates, so the log can show roughly which area was viewed. The log does not record the contents of requests (route coordinates, search text), your request headers, or query strings. Log entries are deleted after about 7 days. We use them only to keep the server secure, to limit abuse (for example, too many requests from one address) and to fix problems.
+</p>
+<p>
+  What the server does not do. It does not have accounts, it does not identify you, and it does not build profiles of riders. The app contains a shared access key that stops strangers from using the server; it is the same for every copy of the app and does not identify you. Connections use HTTPS.
 </p>
 
-<h2>6. Music control bar</h2>
+<h2>5. Traffic rerouting suggestions and HERE</h2>
 <p>
-  If you grant Notification Access, Rider Wave can display and control whatever music app
-  you're currently playing (song title, artist, album art, play/pause/skip). This works by
-  reading the Android system's local media session on your device — it never reads
-  notification content, never requires logging into any music service, and this data never
-  leaves your device.
+  If you turn on "Traffic rerouting suggestions" (Settings → Developer), then while you are navigating Rider Wave sends your current position, your destination and a few points along your route to the Rider Wave Server every few minutes. The server asks HERE Technologies, a traffic data provider, for current traffic along that route and sends back only whether there is a slowdown and a possible faster route.
+</p>
+<p>
+  HERE receives those route coordinates from our server. It never receives your IP address, and the app has no account or device identifier to send it. The server keeps the answer in memory for about two minutes, so that nearby riders can share it, and does not store it. Rider Wave never changes your route unless you tap "Take it". HERE's own privacy policy applies to what HERE receives.
 </p>
 
-<h2>7. No accounts, no analytics, no advertising</h2>
+<h2>6. Other services the app talks to directly</h2>
 <p>
-  Rider Wave does not currently have user accounts, sign-in, or any cloud-based social
-  features. The app does not integrate any analytics, crash-reporting, or advertising SDKs
-  as of this policy's last update.
+  When a feature is not using the Rider Wave Server, your phone sends the request directly to an independent service. Rider Wave does not operate these services, and each has its own privacy policy. They see your IP address, as any website does, and the information the request needs: for example the coordinates of a route, the area of the map you are viewing, or the place you searched for.
+</p>
+<ul>
+  <li>Nominatim / OpenStreetMap: address search and geocoding</li>
+  <li>Valhalla and OSRM: route calculation</li>
+  <li>Overpass API (OpenStreetMap): places nearby, such as gas stations</li>
+  <li>Open-Meteo: weather</li>
+  <li>U.S. National Weather Service (api.weather.gov): weather alerts</li>
+  <li>RainViewer: radar imagery</li>
+  <li>Map tile providers, including OpenFreeMap, OpenStreetMap-based sources and Esri: the map imagery itself</li>
+</ul>
+<p>
+  Rider Wave uses no account or key of its own with these services.
 </p>
 
-<h2>8. Children's privacy</h2>
+<h2>7. Music control bar</h2>
 <p>
-  Rider Wave is not directed at children, and we do not knowingly collect personal
-  information from children. Since the app has no accounts or data submission to any
-  server, there is no mechanism today for personal information to reach us from any user.
+  If you grant Notification Access, Rider Wave can display and control whatever music app you are currently playing (song title, artist, album art, play/pause/skip). This works by reading the Android system's local media session on your device. It never reads notification content, never requires logging into any music service, and this data never leaves your device.
 </p>
 
-<h2>9. This is a beta app, and this policy will change</h2>
+<h2>8. No accounts, no analytics, no advertising, no sale of data</h2>
 <p>
-  Rider Wave is under active development. Planned future features — such as a shared
-  backend, user accounts, or business/social features — do not exist yet and are not
-  described here as current fact. When any feature is introduced that changes how data is
-  collected, stored, or transmitted, <strong>this policy will be updated first</strong>, and
-  the "Last updated" date above will reflect that change.
+  Rider Wave has no user accounts, sign-in or cloud social features, and includes no analytics, crash-reporting, advertising or tracking software. We do not sell your personal information, and we do not share it for advertising. We do not share what we receive except as described in sections 4 to 6, or if the law requires it.
 </p>
 
-<h2>10. Contact</h2>
+<h2>9. How long we keep data, and your choices</h2>
+<ul>
+  <li>On your phone: until you delete it in Settings → Your data or delete the app.</li>
+  <li>On the Rider Wave Server: access log entries are deleted after about 7 days. We do not intentionally store anything else about you.</li>
+  <li>You can turn off every server feature in Settings → Developer, deny or withdraw location permission in your system settings, or stop using the app.</li>
+  <li>Because Rider Wave has no accounts, we generally cannot tell which log entries belong to you. If you would like to ask what we hold, or ask us to delete something, email us (section 12) and we will help where we can. If you live where privacy laws such as the California Consumer Privacy Act apply: we do not sell or share personal information.</li>
+</ul>
+
+<h2>10. Security</h2>
 <p>
-  Questions about this policy can be sent to
-  <a href="mailto:david@terrabae.com">david@terrabae.com</a>.
+  We take reasonable steps to protect the server, including HTTPS, request limits and keeping the access log short-lived. No system is perfectly secure, and we cannot promise it will never be compromised.
+</p>
+
+<h2>11. Children's privacy</h2>
+<p>
+  Rider Wave is not directed at children, and we do not knowingly collect personal information from children. Rider Wave has no accounts and asks for no personal details, but the server access log can contain an IP address, as described above.
+</p>
+
+<h2>12. Contact</h2>
+<p>
+  Questions about this policy, or requests about data, can be sent to <a href="mailto:david@terrabae.com">david@terrabae.com</a>.
+</p>
+
+<h2>13. Changes to this policy</h2>
+<p>
+  Rider Wave is under active development. We will update this policy before we begin collecting or sharing any new kind of data, and the "Last updated" date above shows when it last changed.
 </p>
 
 <hr>
