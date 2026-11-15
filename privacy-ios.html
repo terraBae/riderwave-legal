@@ -81,7 +81,7 @@
   Rider Wave runs its own server, operated by the app's developer on its own hardware in the United States, that can answer some map requests so that fewer of them go to outside companies. These features are listed below. All of them can be turned off in Settings → Developer; most are off by default, and "Search as you type" is on by default.
 </p>
 <ul>
-  <li>Routes (off by default): the start, stops and destination of a route that lies within Florida and Kentucky are sent so the server can calculate it. Other routes use the public routing services in section 6.</li>
+  <li>Routes (off by default): the start, stops and destination of a route that lies within Florida and Kentucky, and the direction you are heading when you are moving (so the route starts the right way), are sent so the server can calculate it. Other routes use the public routing services in section 6.</li>
   <li>Address search (off by default): your search text and your position, used to rank nearby results.</li>
   <li>Search as you type (on by default): the letters you have typed so far, and your position, to suggest places while you type. If you turn it off, searching works as before when you press Enter.</li>
   <li>Weather radar (off by default): the radar map tiles for the area you are viewing.</li>
@@ -96,15 +96,15 @@
 
 <h2>5. Traffic rerouting suggestions and HERE</h2>
 <p>
-  If you turn on "Traffic rerouting suggestions" (Settings → Developer), then while you are navigating Rider Wave sends your current position, your destination and a few points along your route to the Rider Wave Server every few minutes. The server asks HERE Technologies, a traffic data provider, for current traffic along that route and sends back only whether there is a slowdown and a possible faster route.
+  If you turn on "Traffic rerouting suggestions" (Settings → Developer), then while you are navigating Rider Wave sends your current position, the direction you are heading when you are moving, your destination and a few points along your route to the Rider Wave Server every few minutes. The server asks HERE Technologies, a traffic data provider, for current traffic along that route and sends back only whether there is a slowdown and a possible faster route.
 </p>
 <p>
-  HERE receives those route coordinates from our server. It never receives your IP address, and the app has no account or device identifier to send it. The server keeps the answer in memory for about two minutes, so that nearby riders can share it, and does not store it. Rider Wave never changes your route unless you tap "Take it". HERE's own privacy policy applies to what HERE receives.
+  HERE receives those route coordinates, and the direction you are heading (so that facing the wrong way at the start of a route is not mistaken for a delay), from our server. It never receives your IP address, and the app has no account or device identifier to send it. The server keeps the answer in memory for about two minutes, so that nearby riders can share it, and does not store it. Rider Wave never changes your route unless you tap "Take it". HERE's own privacy policy applies to what HERE receives.
 </p>
 
 <h2>6. Other services the app talks to directly</h2>
 <p>
-  When a feature is not using the Rider Wave Server, your iPhone sends the request directly to an independent service. Rider Wave does not operate these services, and each has its own privacy policy. They see your IP address, as any website does, and the information the request needs: for example the coordinates of a route, the area of the map you are viewing, or the place you searched for.
+  When a feature is not using the Rider Wave Server, your iPhone sends the request directly to an independent service. Rider Wave does not operate these services, and each has its own privacy policy. They see your IP address, as any website does, and the information the request needs: for example the coordinates of a route and the direction you are heading, the area of the map you are viewing, or the place you searched for.
 </p>
 <ul>
   <li>Nominatim / OpenStreetMap: address search and geocoding</li>
