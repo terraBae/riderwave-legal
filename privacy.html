@@ -48,7 +48,7 @@
 <p class="updated">Last updated: November 16, 2026 &middot; Applies to Rider Wave (Android)</p>
 
 <div class="note">
-  <strong>Plain-language summary:</strong> Rider Wave has no analytics and no advertising, and you can use it without an account. Without an account, your rides, routes and saved places stay on your phone. Some map features can be answered by the Rider Wave Server, which we run ourselves. When you use those, the server sees your IP address and the location or search text needed to answer, and keeps a basic access log, without those contents, for a short time, usually a few days. We never sell your data. Rider Wave accounts, profiles, business profiles and community features are optional and in beta. If you create an account, the information you add, and anything you choose to share such as your location, heading, speed, route or destination, is stored on our server and may be seen by other riders. While these features are in beta, the privacy settings that limit who sees it may not work correctly, so treat anything you add to an account as visible to other riders. Section 13 explains this in full. You must be 16 or older to create an account. By using Rider Wave you accept this policy as part of the Terms of Use.
+  <strong>Plain-language summary:</strong> Rider Wave has no analytics and no advertising, and you can use it without an account. Without an account, your rides, routes and saved places stay on your phone. Some map features can be answered by the Rider Wave Server, which we run ourselves. When you use those, the server sees your IP address and the location or search text needed to answer, and keeps a basic access log, without those contents, for a short time, usually a few days. We never sell personal information. We may sell or license combined, anonymous ride-path data from all riders together, never data about you as an individual (section 8). We give information to law enforcement only when the law requires it (section 14), and police officers can use Rider Wave like any other rider (section 15). Rider Wave accounts, profiles, business profiles and community features are optional and in beta. If you create an account, the information you add, and anything you choose to share such as your location, heading, speed, route or destination, is stored on our server and may be seen by other riders. While these features are in beta, the privacy settings that limit who sees it may not work correctly, so treat anything you add to an account as visible to other riders. Section 13 explains this in full. You must be 16 or older to create an account. By using Rider Wave you accept this policy as part of the Terms of Use.
 </div>
 
 <h2>1. What this app is</h2>
@@ -104,6 +104,9 @@
   With the same switch on, the map also shows traffic on your route: when you look at a route before starting it, and every few minutes while you navigate, the app asks the Rider Wave Server for traffic in a few map squares of about 30 km that your route passes through (only the squares, not your position or destination). The server asks HERE for slow roads, closures, crashes and roadworks in those squares and passes them back, and the app draws them on the map. The server keeps these answers in memory for about two minutes and does not store them.
 </p>
 <p>
+  Traffic along the whole route. In some versions, instead of asking for map squares, the app sends the Rider Wave Server a simplified line of your route (up to 300 points, without times) every few minutes while you navigate and when you look at a route before starting it. The server asks HERE for traffic speeds and incidents along that whole line and sends back which stretches are slow and which incidents lie on or near the route. HERE receives the route line (and a few points along it to match the road) from our server, not your name or any identifier. The server keeps the answer in memory for about two minutes and does not store your route.
+</p>
+<p>
   HERE receives those route coordinates, and the direction you are heading (so that facing the wrong way at the start of a route is not mistaken for a delay), from our server. When your phone does not send a direction, for example because you are stopped, the server works one out from the route's own points. It never receives your IP address, and the app has no account or device identifier to send it. The server keeps the answer in memory for about two minutes, so that nearby riders can share it, and does not store it. Rider Wave never changes your route unless you tap "Re-route". HERE's own privacy policy applies to what HERE receives.
 </p>
 
@@ -137,9 +140,12 @@
   If you grant Notification Access, Rider Wave can display and control whatever music app you are currently playing (song title, artist, album art, play/pause/skip). This works by reading the Android system's local media session on your device. It never reads notification content, never requires logging into any music service, and this data never leaves your device.
 </p>
 
-<h2>8. No analytics, no advertising, no sale of data</h2>
+<h2>8. No analytics, no advertising; how we may use combined ride data</h2>
 <p>
-  Rider Wave includes no analytics, crash-reporting, advertising or tracking software. We do not sell your personal information, and we do not share it for advertising. We do not share what we receive except as described in sections 4 to 6 and 13, or if the law requires it.
+  Rider Wave includes no analytics, crash-reporting, advertising or tracking software. We do not sell your personal information, and we do not share it for advertising. We do not share what we receive except as described in sections 4 to 6 and 13, as this section describes, or if the law requires it (section 14).
+</p>
+<p>
+  Combined ride-path data. We may sell or license data about how riders use roads, drawn from the activity of the Rider Wave user base as a whole, to other companies, for example companies that want to understand where and how motorcyclists ride, including for marketing. What may be included is limited to ride-path data: the routes and roads ridden, shown together for many riders at once. It is never data about one rider. It is not linked to your name, handle, profile, account, phone, internet address, bikes, posts, messages, follows, searches or saved places, and we will not sell any of those. We will not sell an individual rider's track, and we will not tell a buyer who rode a path. We do not sell your personal information. The ride-path data we may sell is combined so that it describes riders as a group and cannot be used to pick out any one person. The only ride paths we can use are ones that reach our server, for example a ride you choose to upload or share; rides that stay on your phone are never part of it.
 </p>
 
 <h2>9. How long we keep data, and your choices</h2>
@@ -148,7 +154,7 @@
   <li>On the Rider Wave Server: access log entries are kept for a short time, usually a few days (we aim for no more than about a week), and then deleted. Without an account we store nothing else about you. If you have an account, section 13 lists what the server keeps and for how long.</li>
   <li>You can turn off every server feature in Settings → Developer, deny or withdraw location permission in your system settings, or stop using the app.</li>
   <li>If you have an account, you can delete it in the app at any time (section 13).</li>
-  <li>Map features are not linked to an account, so we generally cannot tell which log entries belong to you. If you would like to ask what we hold, or ask us to delete something, email us (section 12) and we will help where we can. If you live where privacy laws such as the California Consumer Privacy Act apply: we do not sell or share personal information.</li>
+  <li>Map features are not linked to an account, so we generally cannot tell which log entries belong to you. If you would like to ask what we hold, or ask us to delete something, email us (section 12) and we will help where we can. If you live where privacy laws such as the California Consumer Privacy Act apply: we do not sell or share personal information. The combined ride-path data described in section 8 is not about any one person.</li>
 </ul>
 
 <h2>10. Security</h2>
@@ -176,7 +182,7 @@
 <ul>
   <li>Your profile: handle (your public username), display name, bio, avatar colour, up to five links, home region (city and state only), the date you started riding, your unit preference, and your settings: who may see each part of your profile (public, followers or private; new settings start private), whether you appear in rider search (off until you turn it on) and whether people need your approval to follow you (on until you change it).</li>
   <li>Your garage: for each bike a nickname, make, model, year, colour, type and a short description. Rider Wave does not store VINs today; if it ever does, they will be encrypted and shown only to you, and this policy will say so first.</li>
-  <li>Business pages you create or join: name, handle, category, tagline, description, website; locations with address, map position, phone number, opening hours and amenities; who is on the team and their roles; invitations; the note you write when you ask for a business to be verified; and claims you make on a place on the map. Business pages are public by design, and a verified business can appear in search and in the nearby list.</li>
+  <li>Business pages you create or join: name, handle, category, tagline, description, website; locations with address, map position, phone number, opening hours and amenities; who is on the team and their roles; invitations; the note you write when you ask for a business to be verified, or, if you verify by website, the address you give (the server then fetches one small file from that website, or looks up one DNS record, and keeps the address and a one-way fingerprint of the code until it expires or the business is deleted); and claims you make on a place on the map. Business pages are public by design, and a verified business can appear in search and in the nearby list.</li>
   <li>Who you follow, who follows you and pending follow requests. For a follow made as a business, the server also keeps which person acted; it is never shown to anyone.</li>
   <li>Your posts (updates, shared rides, and for businesses offers and events) with who may see each one, your comments, your likes and your replies to events. A shared ride is only the name you give it, a simplified line of at most 400 points with the start and end trimmed by the app, the distance, the time it took and the date; never your exact track or the time of each point. Posts and comments you make as a business also record which person wrote them, which is never shown to anyone except the business's owners and managers.</li>
   <li>People you block, and reports you make about a rider, a business, a post or a comment: what it is about, the reason you pick and the note you may add. Only the reviewers read reports.</li>
@@ -204,10 +210,20 @@
   How long we keep it, and deleting it. Account information is kept while your account exists. You can delete your account in the app at any time. Deleting it removes your profile, garage, phones, sign-ins, follows, blocks, posts, comments, likes and event replies, and the businesses where you are the only owner (with their pages, team and counts) from our server straight away; a business that has another owner stays with them. Deleting a single post removes it, with its likes, comments and replies, straight away. Reviewers can also remove a reported post or comment. Your name and notes are removed from the reports you made. Copies in our encrypted backups are deleted when those backups expire, within about two weeks. Your handle stays reserved for 30 days so no one else can take it at once. A report that a reviewer has decided is deleted 30 days after the decision. Data on your own phone stays until you delete it there.
 </p>
 <p>
-  Where it is kept. Account information is stored on the Rider Wave Server described in section 4, in the United States, and in its encrypted backups. It is not sold and not used for advertising.
+  Where it is kept. Account information is stored on the Rider Wave Server described in section 4, in the United States, and in its encrypted backups. Your personal information is not sold and not used for advertising. Combined ride-path data is described in section 8.
 </p>
 
-<h2>14. Changes to this policy</h2>
+<h2>14. Law enforcement and legal requests</h2>
+<p>
+  We will work with local, state and federal law enforcement agencies when we receive a valid warrant, court order or subpoena, or when the law otherwise requires us to give information. Outside of those cases, we will not give information about you to law enforcement or other government bodies. We can only give what we hold. Without an account that is very little (the short-lived access log in section 4); the rides, routes and places stored on your phone are not on our server.
+</p>
+
+<h2>15. Police officers can use Rider Wave too</h2>
+<p>
+  Local, state and federal law enforcement officers can, and probably will, create their own Rider Wave accounts and profiles. Like any other rider they can see what is public, send friend (follow) requests, send messages where messaging is available, and add or remove police-presence icons on the map. Rider Wave does not control that, cannot tell who is an officer, and cannot stop it. Treat anything you share publicly, anything you accept from another account, and every police icon on the map as something a police officer may have added, changed or seen.
+</p>
+
+<h2>16. Changes to this policy</h2>
 <p>
   Rider Wave is under active development. Section 13 describes the kinds of information accounts and community features can use, and new features within those kinds are covered by it as they are added. We will update this policy before we begin collecting or sharing any kind of data not described here, and the "Last updated" date above shows when it last changed.
 </p>
