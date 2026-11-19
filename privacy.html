@@ -67,7 +67,8 @@
   <li>Badges you have earned and what you chose to show of them (kept on the phone; nothing about badges is sent to anyone)</li>
   <li>Saved places (home, work, favorites, recent searches and destinations)</li>
   <li>Map pictures and weather data that the map keeps on your phone so it loads faster</li>
-  <li>Diagnostic log (off by default; Settings → Developer): if you turn it on, the app keeps a log of what it is doing, including your precise position and the time of each point, so problems can be investigated. It is held on your phone and leaves it only if you export it and choose where to send it</li>
+  <li>Diagnostic log (on by default; you can turn it off in Settings → Developer): the app keeps a limited, rolling log of what it is doing, including your precise position and the time of each point, so problems can be investigated. It is held on your phone and leaves it only if you export it and choose where to send it; turning it off stops new entries</li>
+  <li>Whether a route ended on its own when you arrived, so the app can ask what you want to do with it the next time you open it</li>
   <li>App settings</li>
 </ul>
 <p>
@@ -81,15 +82,15 @@
 
 <h2>4. The Rider Wave Server</h2>
 <p>
-  Rider Wave runs its own self-hosted server, operated by the app's developer on its own hardware in the United States, that can answer some map requests so that fewer of them go to outside companies. These features are listed below. All of them can be turned off in Settings → Developer; most are off by default, and "Search as you type" is on by default.
+  Rider Wave runs its own self-hosted server, operated by the app's developer on its own hardware in the United States, that can answer some map requests so that fewer of them go to outside companies. These features are listed below. All of them can be turned off in Settings → Developer; they are on by default in this version.
 </p>
 <ul>
-  <li>Routes (off by default): the start, stops and destination of a route that lies within Florida and Kentucky, and the direction you are heading when you are moving (so the route starts the right way), are sent so the server can calculate it. If you ask for a way home that avoids highways or tolls, or that uses different roads from the ride, the app sends the same kind of request; for "different roads" it also sends up to 40 points along the roads you just rode, so the server can steer away from them. Other routes use the public routing services in section 6.</li>
-  <li>Address search (off by default): your search text and your position, used to rank nearby results.</li>
+  <li>Routes (on by default): the start, stops and destination of a route that lies within Florida and Kentucky, and the direction you are heading when you are moving (so the route starts the right way), are sent so the server can calculate it. If you ask for a way home that avoids highways or tolls, or that uses different roads from the ride, the app sends the same kind of request; for "different roads" it also sends up to 40 points along the roads you just rode, so the server can steer away from them. Other routes use the public routing services in section 6.</li>
+  <li>Address search (on by default): your search text and your position, used to rank nearby results.</li>
   <li>Search as you type (on by default): the letters you have typed so far, and your position, to suggest places while you type. If you turn it off, searching works as before when you press Enter.</li>
   <li>Road name (on, while you ride in drive mode on a road your route does not name, for example with no route): your position, at most about once every 30 seconds and every 300 metres, is sent to look up the name of the road you are on for the small navigation card. It goes to the Rider Wave Server if you turned on address search, otherwise to Nominatim (section 6). Nothing is kept with it.</li>
-  <li>Weather radar (off by default): the radar map tiles for the area you are viewing.</li>
-  <li>Traffic rerouting suggestions (off by default): see section 5.</li>
+  <li>Weather radar (on by default): the radar map tiles for the area you are viewing.</li>
+  <li>Traffic rerouting suggestions (on by default): see section 5.</li>
 </ul>
 <p>
   What the server records. Its access log keeps your IP address, the date and time, the type of request, the web address path, the response status, its size, how long it took and a few other technical details of the connection. For radar the path includes the map tile coordinates, so the log can show roughly which area was viewed. The log does not record the contents of requests (route coordinates, search text), your request headers, or query strings. Log entries are kept for a short time, usually a few days, and then deleted. The log is rotated by size, so on a very quiet server an entry could stay longer, but we aim to keep none for more than about a week. We use them only to keep the server secure, to limit abuse (for example, too many requests from one address) and to fix problems.
@@ -100,7 +101,7 @@
 
 <h2>5. Traffic rerouting suggestions and HERE</h2>
 <p>
-  If you turn on "Traffic rerouting suggestions" (Settings → Developer), then while you are navigating Rider Wave sends your current position, the direction you are heading when you are moving, your destination, a few points along your route and roughly how far you have left to go to the Rider Wave Server every few minutes. The server asks HERE Technologies, a traffic data provider, for current traffic along that route and sends back only whether there is a slowdown and a possible faster route.
+  Unless you turn off "Traffic rerouting suggestions" (Settings → Developer), while you are navigating Rider Wave sends your current position, the direction you are heading when you are moving, your destination, a few points along your route and roughly how far you have left to go to the Rider Wave Server every few minutes. The server asks HERE Technologies, a traffic data provider, for current traffic along that route and sends back only whether there is a slowdown and a possible faster route.
 </p>
 <p>
   With the same switch on, the map also shows traffic on your route: when you look at a route before starting it, and every few minutes while you navigate, the app asks the Rider Wave Server for traffic in a few map squares of about 30 km that your route passes through (only the squares, not your position or destination). The server asks HERE for slow roads, closures, crashes and roadworks in those squares and passes them back, and the app draws them on the map. The server keeps these answers in memory for about two minutes and does not store them.
@@ -131,7 +132,7 @@
   Rider Wave uses no account or key of its own with these services.
 </p>
 <p>
-  Weather alerts on the map. While the map is open, your phone asks Open-Meteo and the National Weather Service about the area around you every 5 to 15 minutes, to show a short card for official weather alerts and for rain about to start. These requests carry your coordinates, go straight from your phone to those services, and stop when the app is in the background. You can turn the cards off in Settings (Weather alerts on the map).
+  Weather alerts on the map. While the map is open, your phone asks Open-Meteo and the National Weather Service about the area around you every 5 to 15 minutes, to show a short card for official weather alerts and for rain about to start. These requests carry your coordinates, go straight from your phone to those services, and stop when the app is in the background. The cards are on by default; you can turn them off in Settings (Weather alerts on the map).
 </p>
 <p>
   Map pre-loading. To make the map feel instant, the app downloads map pictures ahead of time for the area around your current location: about 20 square miles for every map style when you open the map style picker (including Esri satellite imagery, even if you do not pick it), a wider area if you stay on a style, and the area around you for the weather view. Those requests go to the map providers listed above, and they show roughly where you are.
